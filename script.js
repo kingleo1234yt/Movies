@@ -1,4 +1,4 @@
-const API_KEY = 'http://www.omdbapi.com/?i=tt3896198&apikey=ab0a1f7b'; // 👈 PASTE YOUR OMDb API KEY HERE
+const API_KEY = 'https://www.omdbapi.com/?i=tt3896198&apikey=ab0a1f7b'; // 👈 PASTE YOUR OMDb API KEY HERE
 const BASE_URL = 'http://www.omdbapi.com/';
 const movieGrid = document.getElementById('movie-grid');
 const searchForm = document.getElementById('search-form');
