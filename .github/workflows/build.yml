@@ -25,10 +25,16 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
+      - name: Setup Expo
+        uses: expo/expo-github-action@v8
+        with:
+          eas-version: latest
+          token: ${{ secrets.EXPO_TOKEN }}
+
       - name: Install Dependencies
         run: npm install
 
-      - name: Generate Native Android Code (Expo Prebuild)
+      - name: Generate Native Android Folder
         run: npx expo prebuild --platform android --no-interactive
 
       - name: Grant Execute Permission for Gradle
