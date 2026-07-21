@@ -1,47 +1,13 @@
 {
   "expo": {
-    "name": "MovieWorldFresh",
-    "slug": "movieworldfresh",
+    "name": "Movies",
+    "slug": "movies",
     "version": "1.0.0",
     "orientation": "default",
-    "icon": "./assets/icon.png",
     "userInterfaceStyle": "dark",
-    "newArchEnabled": true,
-    "splash": {
-      "image": "./assets/splash-icon.png",
-      "resizeMode": "contain",
-      "backgroundColor": "#000000"
-    },
-    "ios": {
-      "supportsTablet": true
-    },
     "android": {
-      "adaptiveIcon": {
-        "foregroundImage": "./assets/adaptive-icon.png",
-        "backgroundColor": "#000000"
-      },
-      "package": "com.movieworldfresh.app",
-      "permissions": [
-        "INTERNET",
-        "ACCESS_NETWORK_STATE"
-      ]
-    },
-    "web": {
-      "favicon": "./assets/favicon.png"
-    },
-    "plugins": [
-      [
-        "react-native-video",
-        {
-          "enableNotificationControls": true
-        }
-      ],
-      [
-        "@react-native-tvos/config-tv",
-        {
-          "isTV": true
-        }
-      ]
-    ]
+      "package": "com.kingleo1234yt.movies",
+      "userInterfaceStyle": "dark"
+    }
   }
 }
