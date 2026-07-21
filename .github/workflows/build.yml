@@ -29,7 +29,7 @@ jobs:
         run: npm install
 
       - name: Generate Native Android Code (Expo Prebuild)
-        run: npx expo prebuild --platform android
+        run: npx expo prebuild --platform android --no-interactive
 
       - name: Grant Execute Permission for Gradle
         run: chmod +x android/gradlew
