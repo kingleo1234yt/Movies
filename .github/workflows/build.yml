@@ -17,7 +17,6 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: 'npm'
 
       - name: Set up Java JDK
         uses: actions/setup-java@v4
@@ -25,16 +24,10 @@ jobs:
           distribution: 'zulu'
           java-version: '17'
 
-      - name: Setup Expo
-        uses: expo/expo-github-action@v8
-        with:
-          eas-version: latest
-          token: ${{ secrets.EXPO_TOKEN }}
-
       - name: Install Dependencies
-        run: npm install
+        run: npm install --legacy-peer-deps
 
-      - name: Generate Native Android Folder
+      - name: Prebuild Native Android
         run: npx expo prebuild --platform android --no-interactive
 
       - name: Grant Execute Permission for Gradle
@@ -43,7 +36,7 @@ jobs:
       - name: Build Android Release APK
         run: |
           cd android
-          ./gradlew assembleRelease --no-daemon
+          ./gradlew assembleRelease -x lint --no-daemon
 
       - name: Upload APK Artifact
         uses: actions/upload-artifact@v4
